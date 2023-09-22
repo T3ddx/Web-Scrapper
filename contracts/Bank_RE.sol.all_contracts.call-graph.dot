@@ -1,0 +1,16 @@
+strict digraph {
+subgraph cluster_160_Bank {
+label = "Bank"
+"160_deposit" [label="deposit"]
+"160_withdrawBalance" [label="withdrawBalance"]
+"160_receive" [label="receive"]
+"160_transferFrom" [label="transferFrom"]
+"160_addAllowance" [label="addAllowance"]
+"160_withdrawBalance" -> "160_withdrawAllowed"
+"160_transferFrom" -> "160_withdrawAllowed"
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"require(bool)" 
+"160_transferFrom" -> "require(bool)"
+}
+}
