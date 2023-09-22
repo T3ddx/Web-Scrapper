@@ -9,7 +9,7 @@ GAS_THRESHOLD = 2.00
 #response from the endpoint from quicknode
 #will never change
 RESPONSE = Web3(HTTPProvider('https://solemn-wandering-borough.discover.quiknode.pro/73c4314a25c0c4d07d664fa5d610af480d02cd24/'))
-
+#testsss
 def get_gas_used(block_num):
     block_info = RESPONSE.eth.get_block(str(hex(block_num)))
     return float(block_info['gasUsed'])/float(block_info['gasLimit']) * 100
