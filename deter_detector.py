@@ -484,6 +484,7 @@ empty_blocks_25 = {int(block[:-1]) for block in empty_block_file_25.readlines()}
 empty_block_file_100 = open('deter_attacks_100.txt', 'r')
 empty_blocks_100 = {int(line.split('|')[0]) : float(line.split('|')[1][:-1]) for line in empty_block_file_100.readlines()}
 
+
 get_MEV(start_val=1342864, file_name='arbitrage', increment_val=2500)
 #get_potential_MEV(start_value=0, file_name='transactions_v3.txt', increment_val=100)
 #get_deter_attacks(19161569, 25000)
